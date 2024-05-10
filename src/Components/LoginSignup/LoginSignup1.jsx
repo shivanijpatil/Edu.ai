@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import "./LoginSignup.css";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import axios from "axios";
 
 import user_icon from "../Assets/person.png";
 import email_icon from "../Assets/email.png";
@@ -11,33 +14,46 @@ const LoginSignup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLoginSignup = () => {
-    if (action === "Login") {
-      const storedUsers = localStorage.getItem("users");
-      if (storedUsers) {
-        const parsedUsers = JSON.parse(storedUsers);
-        const user = parsedUsers.find(
-          (user) => user.email === email && user.password === password
-        );
-        if (user) {
-          alert("Login successful!");
-        } else {
-          alert("Invalid email or password!");
-        }
-      } else {
-        alert("No users found!");
+  const navigate = useNavigate();
+
+  const handleLoginSignup = async () => {
+    let isproceed = true;
+    let errormessage = "Please enter the value in ";
+    if (action === "Sign Up") {
+      if (name === null || name === "") {
+        isproceed = false;
+        errormessage += " Name";
       }
+
+      if (password === null || password === "") {
+        isproceed = false;
+        errormessage += " Password";
+      }
+      if (email === null || email === "") {
+        isproceed = false;
+        errormessage += " Email";
+      }
+
+      if (!isproceed) {
+        toast.warning(errormessage);
+      }
+      return isproceed;
     } else {
-      const newUser = { name, email, password };
-      const storedUsers = localStorage.getItem("users");
-      if (storedUsers) {
-        const parsedUsers = JSON.parse(storedUsers);
-        const updatedUsers = [...parsedUsers, newUser];
-        localStorage.setItem("users", JSON.stringify(updatedUsers));
-      } else {
-        localStorage.setItem("users", JSON.stringify([newUser]));
+      try {
+        const response = await axios.post(
+          "https://mock-api-template-4.onrender.com/users/login",
+          {
+            name,
+            email,
+            password,
+          }
+        );
+        const token = response.data.token;
+        navigate("/dashboard");
+      } catch (error) {
+        console.error("Login failed:", error);
+        toast.error("Login failed. Please check your credentials.");
       }
-      alert("Signup successful!");
     }
   };
 
