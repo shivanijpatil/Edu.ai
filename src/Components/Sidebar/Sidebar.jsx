@@ -1,7 +1,7 @@
 import React from 'react';
-import PerformanceAnalysis from './PerformanceAnalysis';
-import Tickets from './Tickets';
-import Quiz from './Quiz';
+import PerformanceAnalysis from '../PerformanceAnalysis/PerformanceAnalysis'; // Adjust the import path
+import Tickets from '../Tickets/Tickets'; // Adjust the import path
+// import Quiz from '../Quiz/Quiz'; // Adjust the import path
 
 const Sidebar = () => {
   return (
@@ -9,7 +9,7 @@ const Sidebar = () => {
       <ul>
         <li><PerformanceAnalysis /></li>
         <li><Tickets /></li>
-        <li><Quiz /></li>
+        {/* <li><Quiz /></li> */}
       </ul>
     </div>
   );

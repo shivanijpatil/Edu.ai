@@ -9,50 +9,88 @@ import email_icon from "../Assets/email.png";
 import password_icon from "../Assets/password.png";
 
 const LoginSignup = () => {
-  const [action, setAction] = useState("Login");
+  const [action, setAction] = useState("Sign Up");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
 
-  const handleLoginSignup = async () => {
+  const handleSignup = async () => {
     let isproceed = true;
-    let errormessage = "Please enter the value in ";
+    let errormessage = "Please enter the required feilds";
     if (action === "Sign Up") {
-      if (name === null || name === "") {
-        isproceed = false;
-        errormessage += " Name";
+      if (name === null || name === "" || password === null || password === "" || email === null || email === "") {
+        alert(errormessage);
+        console.log(errormessage);
       }
+      else {
+        try {
+          const response = await axios.post(
+            "https://mock-api-template-4.onrender.com/users",
+            {
+              "name": name,
+              "email": email,
+              "password": password
 
-      if (password === null || password === "") {
-        isproceed = false;
-        errormessage += " Password";
-      }
-      if (email === null || email === "") {
-        isproceed = false;
-        errormessage += " Email";
-      }
-
-      if (!isproceed) {
-        toast.warning(errormessage);
-      }
-      return isproceed;
-    } else {
-      try {
-        const response = await axios.post(
-          "https://mock-api-template-4.onrender.com/users/login",
-          {
-            name,
-            email,
-            password,
+            }
+          );
+          console.log("response.data=" + response.status);
+          if (response.status == 201) {
+            alert(" User Signup Successful")
           }
-        );
-        const token = response.data.token;
-        navigate("/dashboard");
-      } catch (error) {
-        console.error("Login failed:", error);
-        toast.error("Login failed. Please check your credentials.");
+          const token = response.data.token;
+          //navigate("/dashboard");
+        } catch (error) {
+          console.error("Login failed:", error);
+          toast.error("Login failed. Please check your credentials.");
+        }
+      }
+    }
+  };
+
+  const handleLogin = async () => {
+    let errormessage = "Please enter the required fields";
+    if (action === "Login") {
+      if (password === "" || email === "") {
+        alert(errormessage);
+        console.log(errormessage);
+      }
+      else {
+        try {
+          const response = await axios.get(
+            `https://mock-api-template-4.onrender.com/users?email=${email}`
+
+          );
+          console.log(response.data);
+          if (!response.data || response.data.length === 0) {
+            alert("Email-id not valid");
+            return;
+          }
+          else {
+            // console.log("response.status=" + response.status);
+            if (response.status === 200) { // Assuming successful login status code is 200
+              const userData = response.data[0];
+              const userPassword = userData.password;
+              // console.log("User password:", userPassword);
+              if (userPassword === password) {
+                alert("User Login Successful")
+                navigate("/Quiz");
+              }
+              else {
+                alert("Login failed. Please check your credentials.");
+              }
+              // const userData = response.data[0];
+
+            }
+
+          }
+          const token = response.data.token;
+          // Do something with the token
+        } catch (error) {
+          console.error("Login failed:", error);
+          toast.error("Login failed. Please check your credentials.");
+        }
       }
     }
   };
@@ -106,7 +144,7 @@ const LoginSignup = () => {
           className={action === "Login" ? "submit gray" : "submit"}
           onClick={() => {
             setAction("Sign Up");
-            handleLoginSignup();
+            handleSignup();
           }}
         >
           Sign Up
@@ -115,7 +153,7 @@ const LoginSignup = () => {
           className={action === "Sign Up" ? "submit gray" : "submit"}
           onClick={() => {
             setAction("Login");
-            handleLoginSignup();
+            handleLogin();
           }}
         >
           Login
