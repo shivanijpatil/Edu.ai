@@ -1,19 +1,38 @@
 import React, { useState } from "react";
+import { globalVariable } from "../globalVariables";
+
 import "./LoginSignup.css";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import axios from "axios";
-
 import user_icon from "../Assets/person.png";
 import email_icon from "../Assets/email.png";
 import password_icon from "../Assets/password.png";
+import { Button } from '@chakra-ui/react';
+// import { IconName } from 'react-icons/tfi';
 
+
+// const [action, setAction] = useState("Sign Up");
+
+import {
+  Alert, AlertIcon, AlertTitle, AlertDescription,
+} from '@chakra-ui/react'
+// const [name, setName] = useState("");
+const name = globalVariable.name;
+const email = globalVariable.email;
+const password = globalVariable.password;
+
+// const [email, setEmail] = useState("");
+// const [password, setPassword] = useState("");
 const LoginSignup = () => {
-  const [action, setAction] = useState("Sign Up");
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
 
+  // const [name, setName] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
+  const [action, setAction] = useState("Sign Up");
+  const [name, setName] = useState(globalVariable.name);
+  const [email, setEmail] = useState(globalVariable.email);
+  const [password, setPassword] = useState(globalVariable.password);
   const navigate = useNavigate();
 
   const handleSignup = async () => {
@@ -75,7 +94,15 @@ const LoginSignup = () => {
               // console.log("User password:", userPassword);
               if (userPassword === password) {
                 alert("User Login Successful")
-                navigate("/Quiz");
+                // < Alert status='error' >
+                //   <><AlertIcon /><AlertTitle>User Login Successful1</AlertTitle><AlertDescription>User Login Successful11.</AlertDescription></>
+                // </Alert >
+                globalVariable.email = { email };
+                globalVariable.name = { name };
+
+                navigate("/Dashboard");
+                return name, email;;
+
               }
               else {
                 alert("Login failed. Please check your credentials.");
@@ -96,7 +123,9 @@ const LoginSignup = () => {
   };
 
   return (
+
     <div className="container">
+
       <div className="header">
         <div className="text">{action}</div>
         <div className="underline"></div>
@@ -162,5 +191,7 @@ const LoginSignup = () => {
     </div>
   );
 };
-
 export default LoginSignup;
+
+
+

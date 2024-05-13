@@ -1,7 +1,9 @@
 import React from 'react';
-import PerformanceAnalysis from '../PerformanceAnalysis/PerformanceAnalysis'; // Adjust the import path
-import Tickets from '../Tickets/Tickets'; // Adjust the import path
-// import Quiz from '../Quiz/Quiz'; // Adjust the import path
+import PerformanceAnalysis from '../PerformanceAnalysis/PerformanceAnalysis';
+import Tickets from '../Tickets/Tickets';
+// import Quiz from '../Quiz/Quiz'; 
+import { IconName } from 'react-icons/tfi';
+
 
 const Sidebar = () => {
   return (

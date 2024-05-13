@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "name": "Shivani",
+        "email": "shivani@gmail.com",
+        "day": "Monday",
+        "score": "3"
+    },
+    {
+        "id": 2,
+        "name": "Shivani",
+        "email": "shivani@gmail.com",
+        "day": "Tuesday",
+        "score": "4"
+    },
+    {
+        "id": 3,
+        "name": "Shivani",
+        "email": "shivani@gmail.com",
+        "day": "Wednesday",
+        "score": "5"
+    },
+    {
+        "id": 4,
+        "name": "Shivani",
+        "email": "shivani@gmail.com",
+        "day": "Thursday",
+        "score": "2"
+    },
+    {
+        "id": 5,
+        "name": "Shivani",
+        "email": "shivani@gmail.com",
+        "day": "Friday",
+        "score": "4"
+    },
+    {
+        "id": 6,
+        "name": "Shivani",
+        "email": "shivani@gmail.com",
+        "day": "Saturday",
+        "score": "3"
+    },
+    {
+        "id": 7,
+        "name": "Shivani",
+        "email": "shivani@gmail.com",
+        "day": "Sunday",
+        "score": "5"
+    },
+    {
+        "id": 8,
+        "name": "Shivani",
+        "email": "shivani@gmail.com",
+        "day": "Monday",
+        "score": "4"
+    },
+    {
+        "id": 9,
+        "name": "Shivani",
+        "email": "shivani@gmail.com",
+        "day": "Tuesday",
+        "score": "3"
+    },
+    {
+        "id": 10,
+        "name": "Shivani",
+        "email": "shivani@gmail.com",
+        "day": "Wednesday",
+        "score": "2"
+    }
+]

@@ -1,8 +1,9 @@
 import React, { useState, useRef } from "react";
 import "./Quiz.css";
 import { data } from "../Assets/data";
+// import { IconName } from 'react-icons/tfi';
 
-import AnswerTimer from "../AnswerTimer/AnswerTimer1";
+//import AnswerTimer from "../AnswerTimer/AnswerTimer1";
 
 const Quiz = () => {
   let [index, setIndex] = useState(0);
@@ -18,12 +19,10 @@ const Quiz = () => {
 
   let option_array = [Option1, Option2, Option3, Option4];
 
+
   const checkAns = (e, ans) => {
     if (lock === false) {
-      if (index === data.length - 1) {
-        setResult(true);
-        return 0;
-      }
+
       if (question.ans === ans) {
         e.target.classList.add("correct");
         setLock(true);
@@ -33,6 +32,10 @@ const Quiz = () => {
         setLock(true);
         option_array[question.ans - 1].current.classList.add("correct");
       }
+      // if (index === data.length ) {
+      //   setResult(true);
+      //   //return 0;
+      // }
     }
   };
   const next = () => {
@@ -45,6 +48,10 @@ const Quiz = () => {
         option.current.classList.remove("correct");
         return null;
       });
+    }
+    if (index === data.length) {
+      setResult(true);
+      return 0;
     }
   };
   const reset = () => {

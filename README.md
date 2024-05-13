@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# Edu.ai
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# This repository is for the construct week project for course RCT104.
+## Introduction
+The challenge we face is to create a comprehensive AI-powered quiz generator and assessment platform that meets the diverse needs of schools and educators. The platform should allow school administrators to create quizzes question types. The quizzes should be generated automatically by AI algorithms, ensuring a diverse and balanced set of questions that challenge students at their appropriate skill levels. Furthermore, the platform should facilitate the administration of quizzes , providing features for results, and monitoring student progress in real-time.
 
-## Available Scripts
+## Project Type
+Frontend  
 
-In the project directory, you can run:
+## Deployed App
+- Frontend: https://edu-bhhl8g370-shivani-s-projects-9689f0ed.vercel.app/
+- Backend:  https://mock-api-template-5.onrender.com
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<hr style="border: 4px solid black">
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Directory Structure
 
-### `npm test`
+<img width="200" alt="Directory Structure" src="">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## This repo has two Parts.
 
-### `npm run build`
+### **1- Backend Server**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Objectives:-
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Create a JSON web server for backend API's.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Ensure Deployment.
 
-### `npm run eject`
+- Deployment:- https://mock-api-template-5.onrender.com
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+ <img width="575" alt="BackendImage" src="./backend image.png">
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  <hr style="border: 4px solid black">
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### **2-Frontend**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Objectives:-
 
-## Learn More
+- Create a look-a-like landing page from https://www.tanishq.co.in/homepage?lang=en_IN.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Use HTML/CSS/JS to achieve the design.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Implement appropriate animations and effects.
 
-### Code Splitting
+- Implement Login/Signup with Authentication functionality.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Implement Dashboard,Results,Quiz functionality.
 
-### Analyzing the Bundle Size
+- Project tracker:- https://edu-bhhl8g370-shivani-s-projects-9689f0ed.vercel.app/
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- A few Images of Our Website
+  
+- Landing Page
 
-### Making a Progressive Web App
+<img width="751" alt="Landing page" src="./backend image.png">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Login and Signup functionality Page
 
-### Advanced Configuration
+<img width="845" alt="Login and Signup functionality Page" src="./Login_Signup_eduai.png">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Dashboard Page
 
-### Deployment
+<img width="839" alt="Dashboard Page" src="./Dashboard.png">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Quiz Page
 
-### `npm run build` fails to minify
+<img width="839" alt="Quiz Page" src="./Quiz page.png">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+<hr style="border: 4px solid black">
+
+## Video Walkthrough of the project
+- https://youtu.be/L-GE8XrQD5I
+
+## Technology Stack
+
+- HTML
+- CSS
+- React
+- React Icons
+- JavaScript
+- JSON Server
