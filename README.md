@@ -2,7 +2,7 @@
 
 # This repository is for the construct week project for course RCT104.
 ## Introduction
-The challenge we face is to create a comprehensive AI-powered quiz generator and assessment platform that meets the diverse needs of schools and educators. The platform should allow school administrators to create quizzes question types. The quizzes should be generated automatically by AI algorithms, ensuring a diverse and balanced set of questions that challenge students at their appropriate skill levels. Furthermore, the platform should facilitate the administration of quizzes , providing features for results, and monitoring student progress in real-time.
+The challenge we face is to create a comprehensive AI-powered quiz generator and assessment platform that meets the diverse needs of schools and educators. The platform should allow school administrators to create quiz question types. The quizzes should be generated automatically by AI algorithms, ensuring a diverse and balanced set of questions that challenge students at their appropriate skill levels. Furthermore, the platform should facilitate the administration of quizzes, provide features for results, and monitor student progress in real time.
 
 ## Project Type
 Frontend  
@@ -16,9 +16,7 @@ Frontend
 
 ## Directory Structure
 
-<img width="200" alt="Directory Structure" src="">
-
-## This repo has two Parts.
+<img width="200" alt="image" src="https://github.com/shivanijpatil/Edu.ai/assets/157980081/7a54b727-1480-42bd-bd8c-6a750c2522ab">
 
 ### **1- Backend Server**
 
@@ -30,7 +28,8 @@ Frontend
 
 - Deployment:- https://mock-api-template-5.onrender.com
 
- <img width="575" alt="BackendImage" src="./backend image.png">
+ <img width="232" alt="image" src="https://github.com/shivanijpatil/Edu.ai/assets/157980081/e3b710b0-8665-4aa6-ab74-cc383efc3c4f">
+
 
   <hr style="border: 4px solid black">
 
@@ -38,7 +37,7 @@ Frontend
 
 ### Objectives:-
 
-- Create a look-a-like landing page from https://www.tanishq.co.in/homepage?lang=en_IN.
+- Create a look-a-like landing page 
 
 - Use HTML/CSS/JS to achieve the design.
 
@@ -46,28 +45,25 @@ Frontend
 
 - Implement Login/Signup with Authentication functionality.
 
-- Implement Dashboard,Results,Quiz functionality.
+- Implement Dashboard, Results, and Quiz functionality.
 
 - Project tracker:- https://edu-bhhl8g370-shivani-s-projects-9689f0ed.vercel.app/
 
-- A few Images of Our Website
-  
 - Landing Page
 
-<img width="751" alt="Landing page" src="./backend image.png">
+<img width="943" alt="image" src="https://github.com/shivanijpatil/Edu.ai/assets/157980081/33ea698f-cd13-438e-9d11-1b897ceb453b">
+
 
 - Login and Signup functionality Page
+<img width="552" alt="image" src="https://github.com/shivanijpatil/Edu.ai/assets/157980081/dbf40ac5-1ae6-4450-ac0c-35a03f2627ff">
 
-<img width="845" alt="Login and Signup functionality Page" src="./Login_Signup_eduai.png">
 
 - Dashboard Page
 
-<img width="839" alt="Dashboard Page" src="./Dashboard.png">
+<img width="955" alt="image" src="https://github.com/shivanijpatil/Edu.ai/assets/157980081/4983bc3a-bb11-4fbd-8bee-c42309787060">
 
 - Quiz Page
-
-<img width="839" alt="Quiz Page" src="./Quiz page.png">
-
+<img width="505" alt="image" src="https://github.com/shivanijpatil/Edu.ai/assets/157980081/14dd7814-e331-42b7-a299-90d2ad098044">
 
 <hr style="border: 4px solid black">
 
@@ -82,3 +78,9 @@ Frontend
 - React Icons
 - JavaScript
 - JSON Server
+
+## Installation & Getting Started
+- git clone repo-link
+- cd ProjectFolderNae 
+- npm install
+- npm start
