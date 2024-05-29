@@ -1,13 +1,13 @@
 # Edu.ai
 
 ## Introduction
-The challenge we face is to create a comprehensive AI-powered quiz generator and assessment platform that meets the diverse needs of schools and educators. The platform should allow school administrators to create quiz question types. The quizzes should be generated automatically by AI algorithms, ensuring a diverse and balanced set of questions that challenge students at their appropriate skill levels. Furthermore, the platform should facilitate the administration of quizzes, provide features for results, and monitor student progress in real time.
+The challenge we face is to create a comprehensive AI-powered quiz generator and assessment platform that meets the diverse needs of schools and educators. The platform should allow school administrators to create quiz question types. The quizzes should be generated automatically by AI algorithms, ensuring a diverse and balanced set of questions that challenge students at their appropriate skill levels. Furthermore, the platform should facilitate the administration of quizzes, provide features for results, and monitor student progress in real-time.
 
 ## Project Type
 Frontend  
 
 ## Deployed App
-- Frontend: https://edu-bhhl8g370-shivani-s-projects-9689f0ed.vercel.app/
+- Frontend: [https://edu-bhhl8g370-shivani-s-projects-9689f0ed.vercel.app/](https://eduai-shivani-s-projects-9689f0ed.vercel.app/)
 - Backend:  https://mock-api-template-5.onrender.com
 
 <hr style="border: 4px solid black">
